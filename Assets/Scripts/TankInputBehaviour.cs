@@ -12,8 +12,6 @@ public class TankInputBehaviour : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        var transformDirection = transform.rotation;
-
         if (Input.GetKey(KeyCode.DownArrow))
         {
             _direction = Vector3.down;
