@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class TankInputBehaviour : MonoBehaviour
+public class Tank : MonoBehaviour
 {
 
     // Speed tank movement
