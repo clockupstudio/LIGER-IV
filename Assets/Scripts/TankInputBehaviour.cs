@@ -4,7 +4,7 @@ public class TankInputBehaviour : MonoBehaviour
 {
 
     // Speed tank movement
-    public float Speed = 5;
+    public float Speed = 5f;
 
     Vector3 _direction = Vector3.zero;
     float _angle = 0f;
@@ -15,7 +15,7 @@ public class TankInputBehaviour : MonoBehaviour
         if (Input.GetKey(KeyCode.DownArrow))
         {
             _direction = Vector3.down;
-            _angle = 180;
+            _angle = 180f;
         }
         else if (Input.GetKey(KeyCode.UpArrow))
         {
@@ -32,7 +32,8 @@ public class TankInputBehaviour : MonoBehaviour
             _direction = Vector3.right;
             _angle = -90f;
         }
-        else {
+        else
+        {
             _direction = Vector3.zero;
         }
 
