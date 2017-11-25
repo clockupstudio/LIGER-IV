@@ -24,7 +24,13 @@ public class BulletFire : MonoBehaviour
             obj.SetActive(false);
             _bullets.Add(obj);
         }
-        InvokeRepeating("Fire", FireRate, FireRate);
+    }
+
+    void Update()
+    {
+        if (Input.GetKey(KeyCode.Space)) {
+            Invoke("Fire", 0.5f);
+        }
     }
 
     // Update is called once per frame
@@ -35,7 +41,6 @@ public class BulletFire : MonoBehaviour
             var bullet = _bullets[i];
             if (!bullet.activeInHierarchy)
             {
-                Debug.Log(string.Format("Bullet #{0} is {1}", i, bullet.activeInHierarchy));
                 bullet.transform.position = transform.position;
                 // rotate the bullet base on tank rotation.
                 bullet.transform.rotation = transform.rotation;
