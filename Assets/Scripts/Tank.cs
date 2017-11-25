@@ -1,7 +1,6 @@
 using UnityEngine;
-using UnityEngine.Networking;
 
-public class Tank : NetworkBehaviour
+public class Tank : MonoBehaviour
 {
 
     // Speed tank movement
@@ -13,8 +12,6 @@ public class Tank : NetworkBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!isLocalPlayer) return;
-
         if (Input.GetKey(KeyCode.DownArrow))
         {
             _direction = Vector3.down;
